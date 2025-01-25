@@ -3,8 +3,18 @@
 - Create React App
 - Configure TailwindCss
 - Header
+- Routing of App
 - Login Form
 - SignUp Form
+- Form Validation
+- useRef Hook
+- Firebase setup
+- Deploying our app to production
+- Create SignUp user account
+- Implement Sign In User Account
+- Created Redux Store with userSlice
+- Implemented Sign out
+- Update profile api
 
 # Features
 
@@ -23,3 +33,7 @@
 - NetflixGPT
   - Search Bar
   - Movie Suggestions
+
+# useRef
+
+- useRef lets you reference a value that's not needed for rendering.
