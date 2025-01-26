@@ -6,12 +6,20 @@ import SecondaryContainer from "./SecondaryContainer";
 import useTopRatedMovies from "../hooks/useTopRatedMovies";
 import useUpComingMovies from "../hooks/useUpcomingMovies";
 import usePopularMovies from "../hooks/usePopularMovies";
+import usePopularSeries from "../utils/usePopularSeries";
+import useNowAiringSeries from "../utils/useOntheAirSeries";
+import useTopRatedSeries from "../utils/useTopRatedTVSeries";
+import useOntheAirSeries from "../utils/useOntheAirSeries";
 
 const Browse = () => {
   useNowPlayingMovies();
   useTopRatedMovies();
   useUpComingMovies();
   usePopularMovies();
+  usePopularSeries();
+  useNowAiringSeries();
+  useTopRatedSeries();
+  useOntheAirSeries();
   return (
     <div>
       <Header />
