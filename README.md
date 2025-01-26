@@ -15,6 +15,19 @@
 - Created Redux Store with userSlice
 - Implemented Sign out
 - Update profile api
+- BugFix: Sign up user displayName and profile picture update
+- BugFix: if the user is not logged in Redirect/browse to Login Page as vice-versa.
+- Unsubscribed to the onAuthStateChanged callback
+- ADD hardcoded values to the constants file.
+- Register TMDB API and create and app and get access token.
+- get Data from TMDB now playing movies list API.
+- custom hook for now playing movies
+- updated store with movies data
+- planning for main container and secondary container
+- fetch data for trailer video
+- update store with trailer video data
+- embedded the youtube video and make it autoplay and mute
+- tailwind classes to make Main container look awesome
 
 # Features
 
@@ -37,3 +50,8 @@
 # useRef
 
 - useRef lets you reference a value that's not needed for rendering.
+
+# React strict mode
+
+- React does some extra rendering to check inconsistencies between the calls.
+- This extra rendering happens only in local and not in the builds
