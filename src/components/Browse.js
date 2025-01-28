@@ -6,10 +6,11 @@ import SecondaryContainer from "./SecondaryContainer";
 import useTopRatedMovies from "../hooks/useTopRatedMovies";
 import useUpComingMovies from "../hooks/useUpcomingMovies";
 import usePopularMovies from "../hooks/usePopularMovies";
-import usePopularSeries from "../utils/usePopularSeries";
-import useNowAiringSeries from "../utils/useOntheAirSeries";
-import useTopRatedSeries from "../utils/useTopRatedTVSeries";
-import useOntheAirSeries from "../utils/useOntheAirSeries";
+import usePopularSeries from "../hooks/usePopularSeries";
+import useNowAiringSeries from "../hooks/useNowAiringSeries";
+import useTopRatedSeries from "../hooks/useTopRatedTVSeries";
+import useOntheAirSeries from "../hooks/useOntheAirSeries";
+
 import GPTSearch from "./GPTSearchPage";
 import { useSelector } from "react-redux";
 

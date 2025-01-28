@@ -1,10 +1,13 @@
 import { useEffect } from "react";
 import { API_OPTIONS } from "../utils/constants";
 import { addAiringSeries } from "../utils/moviesSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const useNowAiringSeries = () => {
   const dispatch = useDispatch();
+  const AiringTodaySeries = useSelector(
+    (state) => state.movies.AiringTodaySeries
+  );
   const getNowAiringSeries = async () => {
     try {
       const SeriesList = await fetch(
@@ -18,7 +21,7 @@ const useNowAiringSeries = () => {
     }
   };
   useEffect(() => {
-    getNowAiringSeries();
+    if (!AiringTodaySeries) getNowAiringSeries();
   }, []);
 };
 

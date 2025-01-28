@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { API_OPTIONS } from "../utils/constants";
 import { addOnTheAirSeries } from "../utils/moviesSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const useOntheAirSeries = () => {
   const dispatch = useDispatch();
+  const OnTheAirSeries = useSelector((state) => state.movies.OnTheAirSeries);
   const getOnTheAirSeries = async () => {
     try {
       const SeriesList = await fetch(
@@ -18,7 +19,7 @@ const useOntheAirSeries = () => {
     }
   };
   useEffect(() => {
-    getOnTheAirSeries();
+    if (!OnTheAirSeries) getOnTheAirSeries();
   }, []);
 };
 

@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { API_OPTIONS } from "../utils/constants";
 import { addPopularSeries } from "../utils/moviesSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const usePopularSeries = () => {
   const dispatch = useDispatch();
+  const popularSeries = useSelector((state) => state.movies.popularSeries);
   const getPopularSeries = async () => {
     try {
       const SeriesList = await fetch(
@@ -18,7 +19,7 @@ const usePopularSeries = () => {
     }
   };
   useEffect(() => {
-    getPopularSeries();
+    if (!popularSeries) getPopularSeries();
   }, []);
 };
 
