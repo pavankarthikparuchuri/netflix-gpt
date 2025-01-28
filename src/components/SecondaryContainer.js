@@ -12,16 +12,6 @@ const SecondaryContainer = () => {
   const popularSeries = useSelector((state) => state.movies.popularSeries);
   const topRatedSeries = useSelector((state) => state.movies.topRatedSeries);
 
-  console.log(
-    nowPlaying,
-    "::nowPlaying",
-    popular,
-    "::popular",
-    topRated,
-    "topRated",
-    upComing,
-    "::upComing"
-  );
   return (
     <div className="bg-black pl-20 w-screen pb-20">
       <div className="-mt-80 relative z-20">

@@ -10,6 +10,8 @@ import usePopularSeries from "../utils/usePopularSeries";
 import useNowAiringSeries from "../utils/useOntheAirSeries";
 import useTopRatedSeries from "../utils/useTopRatedTVSeries";
 import useOntheAirSeries from "../utils/useOntheAirSeries";
+import GPTSearch from "./GPTSearchPage";
+import { useSelector } from "react-redux";
 
 const Browse = () => {
   useNowPlayingMovies();
@@ -20,19 +22,18 @@ const Browse = () => {
   useNowAiringSeries();
   useTopRatedSeries();
   useOntheAirSeries();
+  const gptToggle = useSelector((state) => state.gpt.showGPTSearch);
   return (
     <div>
       <Header />
-      {/* 
-        MainContainer
-         - VideoBackground
-         -  VideoTitle
-        SecondaryContainer
-         - MovieList * n
-           - cards * n 
-       */}
-      <MainContainer />
-      <SecondaryContainer />
+      {!gptToggle ? (
+        <>
+          <MainContainer />
+          <SecondaryContainer />
+        </>
+      ) : (
+        <GPTSearch />
+      )}
     </div>
   );
 };

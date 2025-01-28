@@ -34,6 +34,11 @@
 - tmdb image cdn url
 - made the browse page amazing with tailwind css
 - added usepopular, usetoprated, useupcoming hooks
+- GPT SEARCH FEATURE
+- Integrate GPT APIs to the project.
+- GPT SEARCH PAGE
+- GPT SEARCH BAR
+- Multi language feauture in out app
 
 # Features
 

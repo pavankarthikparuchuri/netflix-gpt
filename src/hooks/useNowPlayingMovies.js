@@ -12,7 +12,6 @@ const useNowPlayingMovies = () => {
         API_OPTIONS
       );
       const data = await MovieList.json();
-      console.log(data, "::data");
       dispatch(addNowPlayingMovies(data.results));
     } catch (err) {
       console.log(err);
